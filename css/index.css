@@ -1,0 +1,157 @@
+
+.flipcard-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+  
+.flipcard {
+    width: 350px;
+    height: 430px;
+    perspective: 1000px;
+    margin: 10px;
+    position: relative; 
+    padding-bottom: 50px;
+}
+.flipcard img {
+    border: 1px solid #ccc;
+    width: 300px;
+    height: 300px;
+    margin-top: 30px;
+}
+
+  
+.flipcard-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+  
+.flipcard.flipped .flipcard-inner {
+    transform: rotateY(180deg);
+}
+  
+.flipcard-front, .flipcard-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+  
+.flipcard-front {
+    background-color: #fff;
+    color: #333;
+}
+  
+.flipcard-back {
+    background-color: #fff;
+    color: #333;
+    transform: rotateY(180deg);
+    overflow-y: auto;
+    max-height: 430px;
+}
+.flipcard-back p {
+    padding: 20px;
+    text-align: left;
+}
+.flip-toggle {
+    position: absolute;
+    bottom: 10px; /* adjust the value to move it lower */
+    left: 50%;
+    transform: translateX(-50%) scale(1.7);
+    text-align: center;
+    cursor: pointer;
+}
+  
+#flipcard-1 {
+    order: 1; 
+}
+  
+#flipcard-2 {
+    order: 2;
+}
+/* Media query for phone screens */
+@media only screen and (max-width: 768px) {
+    
+    /* You can override any styles from the original code here */
+    .flipcard {
+      width: 250px;
+      height: 300px;
+      padding-bottom: 50px;
+    }
+    
+    .flipcard img {
+      width: 200px;
+      height: 200px;
+    }
+    
+    .flipcard-inner {
+      font-size: 14px;
+    }
+    
+    .flipcard-back p {
+      padding: 10px;
+    }
+    
+    .flip-toggle {
+      bottom: 10px;
+      transform: translateX(-50%) scale(1.5);
+    }
+}
+
+
+.bilete-section {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.bilete-section > h2 > span {
+    background-color: #f7f7f7;
+    padding: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.26);
+    display: inline-block;
+}
+.bilete-section > a{
+    font-size: x-large;
+}
+
+.news-section {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 20px 50px 20px;
+    color: #340C0C;
+
+}
+  
+.news-section h2 {
+    margin-top: 0;
+    color: #340C0C;
+    text-align: center;
+    font-family: 'Larken Regular';
+
+}
+  
+.news-section li {
+    margin-bottom: 20px;
+}
+  
+.news-section h3 {
+    font-weight: bold;
+    margin-top: 0;
+    font-family: 'Larken Regular';
+    color: #340C0C;
+}
+  
+.news-section p {
+    font-size: 16px;
+    color: #340C0C;
+    font-family: 'Larken Regular';
+    margin-bottom: 10px;
+}

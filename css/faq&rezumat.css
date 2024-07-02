@@ -1,0 +1,65 @@
+
+.rezumat {
+    margin: 50px auto;
+    max-width: 80%;
+    text-align: center;
+    font-size: x-large;
+    color: #340C0C;
+    padding: 20px;
+    box-sizing: border-box;
+}
+  
+@media (max-width: 768px) {
+    .rezumat {
+      margin: 30px auto;
+      max-width: 90%;
+    }
+}
+  
+@media (max-width: 480px) {
+    .rezumat {
+      margin: auto;
+      max-width: 95%;
+    }
+}
+
+.faq {
+    margin: 50px auto;
+    max-width: 80%;
+    text-align: center;
+    font-size: x-large;
+    color: #340C0C;
+    padding: 20px;
+    box-sizing: border-box;
+}
+  
+@media (max-width: 768px) {
+    .faq {
+      margin: 30px auto;
+      max-width: 90%;
+    }
+}
+  
+@media (max-width: 480px) {
+    .faq {
+      margin: auto;
+      max-width: 95%;
+    }
+}
+  /* Hidden Part */
+.hidden-part {
+    font-family: serif;
+    overflow-y: auto;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    color: #340C0C;
+    padding: 0px;
+}
+  
+.hidden-part.open {
+    max-height: 10000px;
+}
